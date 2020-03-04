@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore built ts files
+__tests__/runner/*
+lib/**/*

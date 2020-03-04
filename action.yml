@@ -1,0 +1,9 @@
+name: 'IntelliCode'
+description: 'Github Action used to access IntelliCode services on CI builds.'
+author: 'Microsoft'
+inputs:
+  pat-token:
+    description: 'The IntelliCode personal access token.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
