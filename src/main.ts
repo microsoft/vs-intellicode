@@ -28,7 +28,7 @@ async function run(): Promise<void> {
         }
 
         // set the verbosity in this variable.
-        const verbosity = "diag";
+        const verbosity = "n";
 
         // Execute the CLI with the given arguments.
         exec.exec("intellicode.exe", [
