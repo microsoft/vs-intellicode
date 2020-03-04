@@ -1,8 +1,8 @@
 {
-  "name": "intellicode-team-models",
-  "version": "0.0.0",
+  "name": "vs-intellicode",
+  "version": "1.0.0",
   "private": true,
-  "description": "IntelliCode Team Models",
+  "description": "Visual Studio IntelliCode",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
