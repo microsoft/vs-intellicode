@@ -2,6 +2,7 @@ import * as core from "@actions/core";
 import * as exec from "@actions/exec";
 import * as fs from "fs";
 import * as path from "path";
+import { Links } from "./links";
 
 async function run(): Promise<void> {
     try {
@@ -10,7 +11,23 @@ async function run(): Promise<void> {
         core.addPath(cliPath);
 
         // Retrieve the PAT Token and the github workspace.
-        const patToken = core.getInput("pat-token");
+        // Get required input arguments.
+        let patToken: string = "";
+        try {
+            // When 'required' is sent as true, git/core will
+            // throw when the argument is not found.
+            patToken = core.getInput("pat-token", { required: true });
+
+            // If the retrieved pat is an empty string, we throw to print the warning end return.
+            if (!patToken) {
+                throw Error;
+            }
+        } catch (error) {
+            core.warning(
+                `Could not find personal access token (PAT) in configuration. Please provide one as a step argument. For instructions on getting a PAT visit ${Links.PAT_TOKEN}`,
+            );
+            return;
+        }
         const directory = process.env.GITHUB_WORKSPACE;
 
         // Validate directory
@@ -27,20 +44,24 @@ async function run(): Promise<void> {
             }
         }
 
-        // set the verbosity in this variable.
-        const verbosity = "n";
-
-        // Execute the CLI with the given arguments.
-        exec.exec("intellicode.exe", [
+        const args = [
             "train",
             "--directory",
             directory,
             "--pat-token",
             patToken,
             "--verbosity",
-            verbosity,
-        ]);
+            "n", // Verbosity level.
+        ];
+
+        // Execute the CLI with the given arguments.
+        exec.exec("intellicode.exe", args);
     } catch (error) {
+        // If an unhandled exception is thrown,
+        // the github action will fail.
+        // this might interrupt the pipeline flow
+        // unless option continue-on-error is set on the step configuration
+        // of the user using this github action.
         core.setFailed(error.message);
     }
 }
