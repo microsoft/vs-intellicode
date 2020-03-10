@@ -57,12 +57,11 @@ async function run(): Promise<void> {
         // Execute the CLI with the given arguments.
         exec.exec("intellicode.exe", args);
     } catch (error) {
-        // If an unhandled exception is thrown,
-        // the github action will fail.
-        // this might interrupt the pipeline flow
-        // unless option continue-on-error is set on the step configuration
-        // of the user using this github action.
-        core.setFailed(error.message);
+        // If an unhandled exception is thrown
+        // an error message is logged.
+        // This allows the pipeline to continue and also notifies
+        // the user that something went wrong on the intellicode model training.
+        core.error(error.message);
     }
 }
 
