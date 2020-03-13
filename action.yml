@@ -3,7 +3,7 @@ description: 'Github Action used to access IntelliCode services on CI builds.'
 author: 'Microsoft'
 inputs:
   pat-token:
-    description: 'The IntelliCode personal access token. Visit https://aka.ms/intellicode-pat-token for more information.'
+    description: 'The IntelliCode personal access token. Visit https://aka.ms/vsic-github#accessing_a_personal_access_token for more information.'
 runs:
   using: 'node12'
   main: 'dist/index.js'
