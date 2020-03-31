@@ -58,7 +58,7 @@ jobs:
 
 ## Generate a personal access token (PAT)
 
-Visual Studio 2019 is required in order to have access to PAT creation. 
+**Visual Studio 2019** is required in order to have access to a personal access token. 
 If you don't have Visual Studio installed you can [download Community edition](https://visualstudio.microsoft.com/downloads/) for free.
 
 Using the VS developer command prompt (In Visual Studio go to Tools > CommandLine > Developer Command Prompt) run the following command:
