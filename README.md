@@ -54,8 +54,8 @@ jobs:
 | Name          | Type              | Description  |
 | ------------- |:-----------------:|:------------:|
 | pat           | string (required) | The personal access token linked to your account. Use secrets to set this value. |
-| platform      | string (optional) | Only for C++ extractions. Sets the platform for the C++ build (ARM, Any CPU, etc). |
-| config        | string (optional) | Only for C++ extractions. Sets the configuration for the C++ build (Debug, Release). |
+| platform      | string (optional) | Only for C++ repositories. Sets the platform for the C++ build (ARM, Any CPU, etc). |
+| config        | string (optional) | Only for C++ repositories. Sets the configuration for the C++ build (Debug, Release). |
 
 
 ## Generate a personal access token (PAT)
