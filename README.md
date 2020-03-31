@@ -90,7 +90,7 @@ You can now use this secret in your pipeline to run IntelliCode team model train
 ## Managing your personal access token
 
 Personal access tokens can be managed using the same Visual Studio developer command prompt. You can create as many tokens as you need, and you can also reuse the same token across different repositories.
-These tokens will be linked to the user account that created them. For security reasons, always make sure to expire or delete those tokens that are no longer in need.
+These tokens will be linked to the user account that created them. For security reasons, always make sure you expire or delete tokens you no longer need.
 
 In order to see a list of your personal access tokens, you can run the following command using the VS developer command prompt
 > intellicode list-pat
