@@ -44,7 +44,7 @@ jobs:
  - name: Train Intellicode Model
       uses: microsoft/vs-intellicode@v1
       with:
-        pat: ${{ secrets.VSIC_TOKEN }} // You need to create this personal access token.
+        pat: ${{ secrets.VSIC_TOKEN }} # You need to create this personal access token.
 ```
 
 ## Inputs
