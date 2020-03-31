@@ -2,7 +2,7 @@
 
 # Automate code completions tailored to your codebase with IntelliCode Team completions
 
-Using this GitHub Action, [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSIntelliCode) automate training a ML completions model as part of your CI workflow to provide in-line, contextually-rich completion suggestions based on your own types in C# and C++.
+Using this GitHub Action, [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSIntelliCode) automate training a Machine Learning completions model as part of your CI workflow to provide in-line, contextually-rich completion suggestions based on your own types in C# and C++.
 
 Visual Studio IntelliCode saves you time by putting what you’re most likely to use at the top of your completion list. IntelliCode recommendations are based on thousands of open source projects on GitHub each with over 100 stars. When combined with the context of your code, the completion list is tailored to promote common practices. To get IntelliCode's starred completion suggestions for your own types, or other types not commonly found in open source, use [IntelliCode Team completions](https://aka.ms/vsic-teamcompletions-quickstart).
 
@@ -10,8 +10,8 @@ With this GitHub Action, you can keep your Team completion suggestions up-to-dat
 
 ## Requirements
 
-* Be the GitHub repo owner/administrator. Only those with repo administrative rights will have access to manage the required Secret to run the IntelliCode GitHub Action.
-* The user has generated an IntelliCode personal access token (PAT) that authorizes IntelliCode services to invoke the GitHub Action.
+* Be the GitHub repo owner/administrator. Only those with repo administrative rights will have access to manage the required secret to run the IntelliCode GitHub Action.
+* An IntelliCode personal access token (PAT) that authorizes IntelliCode services to invoke the GitHub.
 * The build agent (MSBUILD, CMAKE) has the minimum required Visual Studio version installed:
 For C# repositories: Visual Studio 2017 or higher
 For C++ repositories: Visual Studio 2019 Update 4 or higher.
@@ -89,7 +89,7 @@ You can now use this secret in your pipeline to run IntelliCode team model train
 
 ## Managing your personal access token
 
-Personal access tokens can be managed using the same Visual studio developer command prompt. You can create as many tokens as you need, and you can also reuse the same token accross different repositories.
+Personal access tokens can be managed using the same Visual Studio developer command prompt. You can create as many tokens as you need, and you can also reuse the same token across different repositories.
 These tokens will be linked to the user account that created them. For security reasons, always make sure to expire or delete those tokens that are no longer in need.
 
 In order to see a list of your personal access tokens, you can run the following command using the VS developer command prompt
@@ -101,7 +101,7 @@ want to delete, and then run the following command:
 
 <img src="./images/managepat.gif" width="800px"> 
 
-## Troubleshoot and Feedback
+## Troubleshooting and Feedback
 
 If you are having issues with running the IntelliCode GitHub Action or would like to provide feedback, let the IntelliCode team know on [the IntelliCode GitHub issues community forum ](https://aka.ms/vsicissues). If you reproduce the problem before submitting your issue, please attach images and/or gifs to the issue to facilitate our investigations.
 Be sure to tag your issue with the tag `feedback` or `issue`
