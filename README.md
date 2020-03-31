@@ -12,7 +12,7 @@ With this GitHub Action, you can keep your Team completion suggestions up-to-dat
 
 * Be the GitHub repo owner/administrator. Only those with repo administrative rights will have access to manage the required Secret to run the IntelliCode GitHub Action.
 * The user has generated an IntelliCode personal access token (PAT) that authorizes IntelliCode services to invoke the GitHub Action.
-* The build agent has the minimum required Visual Studio version installed:
+* The build agent (MSBUILD, CMAKE) has the minimum required Visual Studio version installed:
 For C# repositories: Visual Studio 2017 or higher
 For C++ repositories: Visual Studio 2019 Update 4 or higher.
 
@@ -85,6 +85,8 @@ You can always create a new token if you need by following the same steps.
 
 You can now use this secret in your pipeline to run IntelliCode team model trainings.
 
+<img src="./images/patgithub.gif" width="800px"> 
+
 ## Managing your personal access token
 
 Personal access tokens can be managed using the same Visual studio developer command prompt. You can create as many tokens as you need, and you can also reuse the same token accross different repositories.
@@ -97,16 +99,14 @@ If you wish to invalidate or delete a previously created personal access token, 
 want to delete, and then run the following command:
 > intellicode delete-pat --pat-id "<your_pat_id>"
 
-## Troubleshoot
+<img src="./images/managepat.gif" width="800px"> 
 
-If you don't see any IntelliCode suggestions, you may have extensions installed that are overriding the IntelliSense UI. This can prevent the IntelliCode "starred" suggestions from appearing at the top of the list. You can verify if extensions are causing this behavior by turning them off and then trying IntelliSense again. Or, if the extension supports it, turn off its auto-completion features.
+## Troubleshoot and Feedback
 
-If this doesn't solve the problem for you, report it by using the Visual Studio [Report a Problem](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio) feature and mention IntelliCode in your report.
+If you are having issues with running the IntelliCode GitHub Action or would like to provide feedback, let the IntelliCode team know on [the IntelliCode GitHub issues community forum ](https://aka.ms/vsicissues). If you reproduce the problem before submitting your issue, please attach images and/or gifs to the issue to facilitate our investigations.
+Be sure to tag your issue with the tag `feedback` or `issue`
 
-
-## Have a question or provide feedback
-
-To provide feedback (requesting a feature or reporting a bug) please post on the [Visual Studio IntelliCode Community Forum](https://aka.ms/vsicissue) with the tag `feedback` or `issue`.
+Once you're able to successfully run the GitHub Action, if you don't see any custom IntelliCode suggestions, you may have extensions installed that are overriding the IntelliSense UI. This can prevent the IntelliCode "starred" suggestions from appearing at the top of the list. You can verify if extensions are causing this behavior by turning them off and then trying IntelliSense again. Or, if the extension supports it, turn off its auto-completion features.
 
 To report an IntelliCode` for Visual Studio bug, use the [Help > Send Feedback > Report a Problem](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio) menu. If you reproduce the problem before submitting the report, logs are automatically included in the report.
 
@@ -122,15 +122,11 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 - [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
 
 
-## Do not use this GitHub action if you are in the following situations
-
-* Your code is built with Maven
-* Your code is built with Gradle
-
+## Supported build configurations
+ 
+* Your code is built with MSBUILD
+* Your code is built with CMAKE for native C++ code
 
 ## License
 
 The files and documentation in this project are released under the MIT License.
-
-Container images built with this project include third party materials.
-
