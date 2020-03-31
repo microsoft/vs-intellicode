@@ -16,7 +16,7 @@ async function run(): Promise<void> {
         try {
             // When 'required' is sent as true, git/core will
             // throw when the argument is not found.
-            patToken = core.getInput("pat-token", { required: true });
+            patToken = core.getInput("pat", { required: true });
 
             // If the retrieved pat is an empty string, we throw to print the warning end return.
             if (!patToken) {
@@ -53,6 +53,13 @@ async function run(): Promise<void> {
             "--verbosity",
             "n", // Verbosity level.
         ];
+
+        const config = core.getInput("config");
+        const platform = core.getInput("platform");
+
+        if (config && platform) {
+            args.push("--config", config, "--platform", platform);
+        }
 
         // Execute the CLI with the given arguments.
         exec.exec("intellicode.exe", args);
