@@ -27,20 +27,20 @@ name: Main IntelliCode Workflow
 on:
   push:
     branches: 
-      - master // IntelliCode recommends training on master branch to increase your model availability.
+      - master # IntelliCode recommends training on master branch to increase your model availability.
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v1 // Project needs to be checked out for us be able to analyze the code.
+    - uses: actions/checkout@v1 # Project needs to be checked out for us be able to analyze the code.
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: <Your_Build_Version>
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release # Project needs to build before training a model.
  - name: Train Intellicode Model
       uses: microsoft/vs-intellicode@v1
       with:
