@@ -46,6 +46,8 @@ jobs:
       with:
         pat: ${{ secrets.VSIC_TOKEN }} # You need to create this personal access token.
 ```
+**NOTE:** Training a C# model usually takes around the same time it takes to build the project. It depends entirely on the length of the codebase.
+
 
 ## Inputs
 
