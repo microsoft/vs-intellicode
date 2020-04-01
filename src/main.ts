@@ -58,7 +58,7 @@ async function run(): Promise<void> {
         const platform = core.getInput("platform");
 
         if (config && platform) {
-            args.push("--config", config, "--platform", platform);
+            args.push("--configuration", config, "--platform", platform);
         }
 
         // Execute the CLI with the given arguments.
