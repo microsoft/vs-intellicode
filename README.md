@@ -105,14 +105,18 @@ want to delete, and then run the following command:
 
 ## Troubleshooting and Feedback
 
+**Having trouble running the Github Action?**
 If you are having issues with running the IntelliCode GitHub Action or would like to provide feedback, let the IntelliCode team know on [the IntelliCode GitHub issues community forum ](https://aka.ms/vsicissues). If you reproduce the problem before submitting your issue, please attach images and/or gifs to the issue to facilitate our investigations.
 Be sure to tag your issue with the tag `feedback` or `issue`
 
-Once you're able to successfully run the GitHub Action, if you don't see any custom IntelliCode suggestions, you may have extensions installed that are overriding the IntelliSense UI. This can prevent the IntelliCode "starred" suggestions from appearing at the top of the list. You can verify if extensions are causing this behavior by turning them off and then trying IntelliSense again. Or, if the extension supports it, turn off its auto-completion features.
+**Not seeing any IntelliCode suggestions?**
+If you are not able to see any IntelliCode suggestions, you may have extensions installed that are overriding the IntelliSense UI. This can prevent the IntelliCode "starred" suggestions from appearing at the top of the list. You can verify if extensions are causing this behavior by turning them off and then trying IntelliSense again. Or, if the extension supports it, turn off its auto-completion features.
 
 To report an IntelliCode` for Visual Studio bug, use the [Help > Send Feedback > Report a Problem](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio) menu. If you reproduce the problem before submitting the report, logs are automatically included in the report.
 
-For feature requests, click the  **Send feedback about** > **This product** button at the bottom of this page to log a new issue. Mention that it's a feature request.
+**Do you have suggestions on how we can make our product better?**
+
+For feature requests or suggestions click the  **Send feedback about** > **This product** button at the bottom of this page to log a new issue. Mention that it's a feature request.
 
 ## See also
 
