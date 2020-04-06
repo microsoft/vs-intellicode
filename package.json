@@ -46,6 +46,6 @@
     "eslint-plugin-jest": "^22.21.0",
     "eslint-plugin-prettier": "^3.1.0",
     "acorn": "^6.4.1",
-    "minimist": "^1.2.2"
+    "minimist": "^1.2.3"
   }
 }
