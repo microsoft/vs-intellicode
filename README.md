@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0 # We need to fetch the entire Git history in order to verify the authenticity.
+        fetch-depth: 0 # We need to fetch the entire codebase for code analysis.
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:

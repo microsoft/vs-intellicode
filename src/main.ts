@@ -42,6 +42,8 @@ async function run(): Promise<void> {
             "--anonymous",
             "--verbosity",
             "n", // Verbosity level.
+            "--user-agent",
+            "GitHub",
         ];
 
         const config = core.getInput("config");
