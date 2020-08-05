@@ -12,6 +12,7 @@ async function run(): Promise<void> {
 
         let directory = process.env.GITHUB_WORKSPACE;
         const overrideDirectory = core.getInput("directory");
+        const overrideLoggingType = core.getInput("logs");
 
         if (overrideDirectory) {
             // If directory was overriden, we override that variable.
@@ -35,13 +36,20 @@ async function run(): Promise<void> {
             }
         }
 
+        let verbosity = "n";
+
+        // If logs are set as debug, we set diag verbosity.
+        if(overrideLoggingType === "debug"){
+            verbosity = "diag";
+        }
+
         const args = [
             "train",
             "--directory",
             directory,
             "--anonymous",
             "--verbosity",
-            "n", // Verbosity level.
+            verbosity, // Verbosity level.
             "--user-agent",
             "GitHub",
         ];
