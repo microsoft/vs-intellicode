@@ -11,6 +11,9 @@ inputs:
   directory:
     description: 'Use if you wish to override the directory where the repo to be trained is located at.'
     required: false
+  logs:
+    description: 'Use debug to override logs and display diagnostics verbosity'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
