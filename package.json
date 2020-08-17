@@ -24,11 +24,11 @@
   "author": "Microsoft",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/exec": "^1.0.2",
-    "@actions/github": "^2.1.0",
-    "@actions/tool-cache": "^1.1.2",
-    "@vsintellicode/cli": "1.0.246"
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0",
+    "@actions/tool-cache": "^1.6.0",
+    "@vsintellicode/cli": "1.0.255"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
