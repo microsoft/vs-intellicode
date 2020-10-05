@@ -11,6 +11,10 @@ With this GitHub Action, you can keep your Team completion suggestions up-to-dat
 * The build agent (MSBUILD, CMAKE) has the minimum required Visual Studio version installed:
 For C# repositories: Visual Studio 2017 or higher
 For C++ repositories: Visual Studio 2019 Update 4 or higher.
+* A full clone of a repository:
+If you are using *checkout@v2* or higher you need to specify a *fetch-depth* of 0 to fetch the complete repository.
+
+
 
 
 ## Usage
@@ -31,9 +35,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2 #Checkout v2 by default fetches just a shallow clone of the repository (latest changes).
       with:
-        fetch-depth: 0 # We need to fetch the entire codebase for code analysis.
+        fetch-depth: 0 # If you are using v2 We need to override the fetch-depth to fetch the entire codebase for code analysis.
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
